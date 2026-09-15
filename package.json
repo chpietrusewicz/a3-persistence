@@ -1,8 +1,8 @@
 {
-  "name": "Apartment Necessities Tracker",
+  "name": "apartment-necessities-tracker",
   "version": "1.0",
   "description": "Track and manage essential apartment or home items, including quantities, utilization levels, and get alerted when you need a restock.",
-  "author": "Casey Pietrusewicz",
+  "author": "Casey-Pietrusewicz",
   "scripts": {
     "start": "node server.js"
   },
