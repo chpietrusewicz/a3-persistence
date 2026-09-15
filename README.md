@@ -120,4 +120,17 @@ STARTING:
   5. serve-favicon: Allows the browser to display a chosen icon for the web application.
 
 ### Design/Evaluation Achievements
-- **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative...
+- **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative:
+  1. use headings to convey meaning
+  2. keep content clear
+  3. ensure interactive elements are easy to identify
+  4. identifiable feedback
+  5. provide clear instructions
+  6. don't use color alone
+  7. design for different viewport sizes
+  8. help users avoid mistakes
+  9. associate a label with every form control
+  10. use markup to convey structure
+  11. ensure all interactive elements are keyboard accessible
+  12. write code that adapts to the user's technology
+
