@@ -121,16 +121,16 @@ STARTING:
 
 ### Design/Evaluation Achievements
 - **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative:
-  1. use headings to convey meaning
-  2. keep content clear
-  3. ensure interactive elements are easy to identify
-  4. identifiable feedback
-  5. provide clear instructions
-  6. don't use color alone
-  7. design for different viewport sizes
-  8. help users avoid mistakes
-  9. associate a label with every form control
-  10. use markup to convey structure
-  11. ensure all interactive elements are keyboard accessible
-  12. write code that adapts to the user's technology
+  1. use headings to convey meaning - Added <h2> tags above the submission form and data table to give clear meaning on what the functionality of both are. Also added headings to the login page.
+  2. keep content clear - Changed the way the utilization dropdown is described, using more common phrases such as everyday or rarely.
+  3. ensure interactive elements are easy to identify - Changed buttons to have a pointing cursor when hovering, as well as slightly enlarging the button.
+  4. identifiable feedback - Added 'required' to all input fields besides the notes. This gives a popup when trying to submit when the inputs are not filled. Also added this feature to the login screen.
+  5. provide clear instructions - Added a <p> tag in the form section to describe what should be entered into the fields.
+  6. don't use color alone - Added symbols to the Have/Need text in the table to give a visual. Also added * for required fields in the table.
+  7. design for different viewport sizes - Used a media query to format the page differently when viewing from a mobile device. The grid will stack vertically instead of horizontally.
+  8. help users avoid mistakes - Added a small help text to the quantity field so users know they have to enter in a number that is greater than or equal to 0.
+  9. associate a label with every form control - Added labels to the login and register form.
+  10. use markup to convey structure - Used <section> inside of the <main> tag in the html. This allows to have the sections act as the grid, and could fit headers and paragraph text inside as well.
+  11. ensure all interactive elements are keyboard accessible - Added .focus to my written css to add an indicator to what fields are selected if someone is using the keyboard.
+  12. write code that adapts to the user's technology - Added the viewport meta tag into the head of both html pages. This is so the page is responsive to the devices width.
 

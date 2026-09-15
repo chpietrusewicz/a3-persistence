@@ -149,10 +149,10 @@ async function run() {
     const utilization = data.utilization;
 
     let status;
-    if ((quantity <= 1 && utilization === "High") || quantity <= 0) {
-      status = "Need";
+    if ((quantity <= 1 && (utilization === "High" || utilization === 'Very High')) || quantity <= 0) {
+      status = "⚠ Need ⚠";
     } else {
-      status = "Have";
+      status = "✓ Have ✓";
     }
 
     const newItem = {
@@ -187,10 +187,10 @@ async function run() {
 
       let status;
 
-      if ((quantity <= 1 && item.utilization === "High") || quantity <= 0) {
-        status = "Need";
+      if ((quantity <= 1 && (item.utilization === "High" || item.utilization === 'Very High')) || quantity <= 0) {
+        status = "⚠ Need ⚠";
       } else {
-        status = "Have";
+        status = "✓ Have ✓";
       }
 
       await collection.updateOne(

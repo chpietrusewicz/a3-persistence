@@ -1,8 +1,14 @@
 main.grid {
-  grid-template-columns: 1fr 70%;
+  grid-template-columns: 30% 1fr;
   gap: 2rem;
   align-items: start;
   padding: var(--pico-spacing);
+}
+
+@media (max-width: 800px) {
+  main.grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
@@ -10,6 +16,24 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+p {
+  font-size: medium;
+  margin: 0%;
+}
+
+button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid white;
+  outline-offset: 2px;
 }
 
 #grocery-table tbody tr {
@@ -25,15 +49,15 @@ footer {
 }
 
 #grocery-table .quantity {
-  width: 8%;
+  width: 1%;
 }
 
 #grocery-table .utilization {
-  width: 12%;
+  width: 10%;
 }
 
 #grocery-table .status {
-  width: 8%;
+  width: 13%;
 }
 
 #grocery-table .notes {
@@ -41,5 +65,5 @@ footer {
 }
 
 #grocery-table .actions {
-  width: 25%;
+  width: 29%;
 }

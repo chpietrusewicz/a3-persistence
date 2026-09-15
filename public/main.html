@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apartment Necessities Tracker</title>
     <meta charset="utf-8" />
     <meta
@@ -8,7 +9,7 @@
       content="Track and manage essential apartment or home items, including quantities, utilization levels, and get alerted when you need a restock."
     />
     <script src="js/main.js"></script>
-    
+
     <link rel="stylesheet" href="css/pico.red.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- get rid of favicon error -->
@@ -17,65 +18,78 @@
   <body class="page">
     <h1 style="top: 20px; left: 20px">Apartment Necessities Tracker</h1>
     <main class="grid">
-      <form class="groceries" id="groceries">
-        <label for="item">Item:</label>
-        <input
-          type="text"
-          id="item"
-          name="item"
-          placeholder="eg. Milk"
-          required
-        />
-        <label for="category">Category:</label>
-        <select id="category" name="category" required>
-          <option value="" disabled selected>Select a category:</option>
-          <option value="Fridge">Fridge</option>
-          <option value="Pantry">Pantry</option>
-          <option value="Freezer">Freezer</option>
-          <option value="Cleaning">Cleaning</option>
-          <option value="Household">Household</option>
-          <option value="Other">Other</option>
-        </select>
-        <label for="quantity">Quantity:</label>
-        <input
-          type="number"
-          id="quantity"
-          name="quantity"
-          min="0"
-          placeholder="eg. 1"
-          required
-        />
-        <label for="utilization">Utilization:</label>
-        <select id="utilization" name="utilization" required>
-          <option value="" disabled selected>Select utilization level:</option>
-          <option value="High">High</option>
-          <option value="Low">Low</option>
-        </select>
-        <label for="notes">Notes:</label>
-        <textarea
-          id="notes"
-          name="notes"
-          placeholder="Add any notes about this item..."
-          rows="3"
-        ></textarea>
+      <section>
+        <h2>Add Your Necessity</h2>
+        <p>Enter the item you want to track and its current quantity/details</p>
+        <p>* means required field</p>
+        <form class="groceries" id="groceries">
+          <label for="item">Item: *</label>
+          <input
+            type="text"
+            id="item"
+            name="item"
+            placeholder="eg. Milk"
+            required
+          />
+          <label for="category">Category: *</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category:</option>
+            <option value="Fridge">Fridge</option>
+            <option value="Pantry">Pantry</option>
+            <option value="Freezer">Freezer</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Household">Household</option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="quantity">Quantity: *</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="0"
+            required
+            aria-describedby="quantity-help"
+          />
+          <small id="quantity-help">Enter 0 or more.</small>
+          <label for="utilization">Utilization: *</label>
+          <select id="utilization" name="utilization" required>
+            <option value="" disabled selected>
+              How often do you use this?
+            </option>
+            <option value="Very High">Every day</option>
+            <option value="High">3-5 times per week</option>
+            <option value="Low">1-2 times per week</option>
+            <option value="Very Low">Rarely</option>
+          </select>
+          <label for="notes">Notes:</label>
+          <textarea
+            id="notes"
+            name="notes"
+            placeholder="Add any notes about this item..."
+            rows="3"
+          ></textarea>
 
-        <button class="submit" type="submit">Submit</button>
-      </form>
+          <button class="submit" type="submit">Submit</button>
+        </form>
+      </section>
 
-      <table class="striped" id="grocery-table">
-        <thead>
-          <tr>
-            <th scope="col" class="item">Item</th>
-            <th scope="col" class="category">Category</th>
-            <th scope="col" class="quantity">Quantity</th>
-            <th scope="col" class="utilization">Utilization</th>
-            <th scope="col" class="status">Status</th>
-            <th scope="col" class="notes">Notes</th>
-            <th scope="col" class="actions">Actions</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+      <section>
+        <h2>Your Added Necessities</h2>
+        <table class="striped" id="grocery-table">
+          <thead>
+            <tr>
+              <th scope="col" class="item">Item</th>
+              <th scope="col" class="category">Category</th>
+              <th scope="col" class="quantity">Quantity</th>
+              <th scope="col" class="utilization">Utilization</th>
+              <th scope="col" class="status">Status</th>
+              <th scope="col" class="notes">Notes</th>
+              <th scope="col" class="actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
     </main>
     <footer>
       <form action="/logout" method="POST">
