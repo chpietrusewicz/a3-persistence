@@ -96,13 +96,14 @@ Sample Readme (delete the above when you're ready to submit, and modify the belo
 
 A link to your project running on render.
 
-Include a very brief summary of your project here. Images are encouraged, along with concise, high-level text. Be sure to include:
+The Apartment Necessities Tracker is a web application that helps users keep track of essential items in their apartment. Users can add items, record their quantity and usage level, and see whether they currently have enough of an item or need more. Users can also modify and delete their items from the saved list.
 
-- the goal of the application
-- challenges you faced in realizing the application
-- what authentication strategy you chose to use and why (choosing one because it seemed the easiest to implement is perfectly acceptable)
-- what CSS framework you used and why
-  - include any modifications to the CSS framework you made via custom CSS you authored
+One of the biggest challenges I faced was connecting the application to MongoDB and making sure that each user could only access their own data. I have never done extensive work with user-based data storage, so it was 
+
+For authentication, I chose cookie-session because it was relatively simple to implement with Express. When a user logs in, their session stores their user ID, which allows the application to identify them and retrieve only their data. Passwords are stored as hashed values with unique salts for additional security.
+
+For the CSS framework, I used Pico.css because it provided a clean layout and style without requiring a large amount of custom CSS. I kept Pico.css responsible for most of the application's styling and only added custom CSS for application-specific changes. 
+My custom CSS includes the two-column desktop layout, a responsive one-column layout for smaller screens, table column sizing, button hover effects, and visible keyboard focus outlines.
 
 ## Technical Achievements
 - **Tech Achievement 1**: I reach 100% in all four lighthouse tests. 

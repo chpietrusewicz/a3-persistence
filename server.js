@@ -102,6 +102,13 @@ async function run() {
         .scryptSync(password, user.salt, 64)
         .toString("hex");
 
+      console.log("Username:", username);
+      console.log("User found:", !!user);
+      console.log("Salt:", user.salt);
+      console.log("Stored hash:", user.passwordHash);
+      console.log("New hash:", passwordHash);
+      console.log("Hashes match:", passwordHash === user.passwordHash);
+
       if (passwordHash !== user.passwordHash) {
         return res.send("Incorrect username or password");
       }
@@ -149,7 +156,11 @@ async function run() {
     const utilization = data.utilization;
 
     let status;
-    if ((quantity <= 1 && (utilization === "High" || utilization === 'Very High')) || quantity <= 0) {
+    if (
+      (quantity <= 1 &&
+        (utilization === "High" || utilization === "Very High")) ||
+      quantity <= 0
+    ) {
       status = "⚠ Need ⚠";
     } else {
       status = "✓ Have ✓";
@@ -187,7 +198,11 @@ async function run() {
 
       let status;
 
-      if ((quantity <= 1 && (item.utilization === "High" || item.utilization === 'Very High')) || quantity <= 0) {
+      if (
+        (quantity <= 1 &&
+          (item.utilization === "High" || item.utilization === "Very High")) ||
+        quantity <= 0
+      ) {
         status = "⚠ Need ⚠";
       } else {
         status = "✓ Have ✓";
