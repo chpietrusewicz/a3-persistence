@@ -88,7 +88,6 @@ async function run() {
   });
 
   app.post("/login", async (req, res) => {
-    console.log("LOGIN ROUTE HIT");
     try {
       const username = req.body.username;
       const password = req.body.password;
@@ -102,13 +101,6 @@ async function run() {
       const passwordHash = crypto
         .scryptSync(password, user.salt, 64)
         .toString("hex");
-
-      console.log("Username:", username);
-      console.log("User found:", !!user);
-      console.log("Salt:", user.salt);
-      console.log("Stored hash:", user.passwordHash);
-      console.log("New hash:", passwordHash);
-      console.log("Hashes match:", passwordHash === user.passwordHash);
 
       if (passwordHash !== user.passwordHash) {
         return res.send("Incorrect username or password");
