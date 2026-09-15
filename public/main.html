@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Apartment Necessities Tracker</title>
+    <meta charset="utf-8" />
+    <script src="js/main.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="css/pico.red.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- get rid of favicon error -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+
+  <body class="page">
+    <h1 style="top: 20px; left: 20px;">Apartment Necessities Tracker</h1>
+    <main class="grid" style="padding: var(--pico-spacing);">
+      <form class="groceries" id="groceries">
+        <label for="item">Item:</label>
+        <input
+          type="text"
+          id="item"
+          name="item"
+          placeholder="eg. Milk"
+          required
+        />
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select a category:</option>
+          <option value="Fridge">Fridge</option>
+          <option value="Pantry">Pantry</option>
+          <option value="Freezer">Freezer</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Household">Household</option>
+          <option value="Other">Other</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="0"
+          placeholder="eg. 1"
+          required
+        />
+        <label for="utilization">Utilization:</label>
+        <select id="utilization" name="utilization" required>
+          <option value="" disabled selected>Select utilization level:</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        </select>
+        <label for="notes">Notes:</label>
+        <textarea
+          id="notes"
+          name="notes"
+          placeholder="Add any notes about this item..."
+          rows="3"
+        ></textarea>
+
+        <button class="submit" type="submit">Submit</button>
+      </form>
+
+      <table class="striped" id="grocery-table">
+        <thead>
+          <tr>
+            <th scope="col" class="item">Item</th>
+            <th scope="col" class="category">Category</th>
+            <th scope="col" class="quantity">Quantity</th>
+            <th scope="col" class="utilization">Utilization</th>
+            <th scope="col" class="status">Status</th>
+            <th scope="col" class="notes">Notes</th>
+            <th scope="col" class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <footer style="padding: var(--pico-spacing); position: fixed; bottom: 20px; right: 20px;">
+      <form action="/logout" method="POST">
+        <button class="outline" type="submit">Logout</button>
+      </form>
+    </footer>
+  </body>
+</html>

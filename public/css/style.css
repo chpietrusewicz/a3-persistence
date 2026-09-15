@@ -1,0 +1,38 @@
+main.grid {
+  grid-template-columns: 1fr 70%;
+  gap: 2rem;
+  align-items: start;
+}
+
+
+#grocery-table tbody tr {
+  height: 60px;
+}
+
+#grocery-table .item {
+  width: 13%;
+}
+
+#grocery-table .category {
+  width: 12%;
+}
+
+#grocery-table .quantity {
+  width: 8%;
+}
+
+#grocery-table .utilization {
+  width: 12%;
+}
+
+#grocery-table .status {
+  width: 8%;
+}
+
+#grocery-table .notes {
+  width: 22%;
+}
+
+#grocery-table .actions {
+  width: 25%;
+}
