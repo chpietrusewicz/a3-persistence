@@ -8,11 +8,15 @@
   },
   "dependencies": {
     "@picocss/pico": "^2.1.1",
+    "body-parser": "^2.3.0",
+    "compression": "^1.8.2",
     "cookie-session": "^2.1.1",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mime": "^2.4.4",
-    "mongodb": "^7.6.0"
+    "mongodb": "^7.6.0",
+    "morgan": "^1.12.1",
+    "serve-favicon": "^2.5.1"
   },
   "engines": {
     "node": "24.x"

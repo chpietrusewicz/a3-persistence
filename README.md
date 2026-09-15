@@ -112,6 +112,12 @@ STARTING:
   Best Practices: 100%
   SEO: 90%
     -> Added in a meta description in the <head> tag of the main.html.
+- **Tech Achievement 2**: 5 Express middleware packages installed.
+  1. body-parser: Parses the form and data so the application can access the users' input through req.body for various functions.
+  2. cookie-session: Handles the user login by using cookies, only allows authenticated users to access their information.
+  3. compression: Compresses the HTTP responses to reduce the amount of tmie it takes the load the page. Helps with the lighthouse test.
+  4. morgan: Logs requests to the console, allowing for easy debugging with logins and form submissions.
+  5. serve-favicon: Allows the browser to display a chosen icon for the web application.
 
 ### Design/Evaluation Achievements
 - **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative...

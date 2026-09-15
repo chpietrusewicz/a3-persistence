@@ -2,6 +2,10 @@ require("dotenv").config();
 
 const express = require("express"),
   cookie = require("cookie-session"),
+  bodyParser = require("body-parser"),
+  compression = require("compression"),
+  morgan = require("morgan"),
+  favicon = require("serve-favicon"),
   crypto = require("crypto"),
   { MongoClient, ObjectId } = require("mongodb"),
   app = express();
@@ -17,18 +21,14 @@ let users = null;
 
 const port = process.env.PORT || 3000;
 
-const appdata = [
-  {
-    item: "Milk",
-    category: "Fridge",
-    quantity: 1,
-    utilization: "High",
-    status: "Need",
-  },
-];
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(compression());
+
+app.use(morgan("dev"));
+
+app.use(favicon("public/favicon.ico"));
 
 app.use(
   cookie({
