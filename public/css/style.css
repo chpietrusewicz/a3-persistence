@@ -2,8 +2,15 @@ main.grid {
   grid-template-columns: 1fr 70%;
   gap: 2rem;
   align-items: start;
+  padding: var(--pico-spacing);
 }
 
+footer {
+  padding: var(--pico-spacing);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 
 #grocery-table tbody tr {
   height: 60px;

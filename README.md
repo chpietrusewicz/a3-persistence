@@ -105,7 +105,13 @@ Include a very brief summary of your project here. Images are encouraged, along 
   - include any modifications to the CSS framework you made via custom CSS you authored
 
 ## Technical Achievements
-- **Tech Achievement 1**: I used OAuth authentication via the GitHub strategy
+- **Tech Achievement 1**: I reach 100% in all four lighthouse tests. 
+STARTING:
+  Performance: 100%
+  Accessability: 100%
+  Best Practices: 100%
+  SEO: 90%
+    -> Added in a meta description in the <head> tag of the main.html.
 
 ### Design/Evaluation Achievements
 - **Design Achievement 1**: I followed the following tips from the W3C Web Accessibility Initiative...

@@ -3,6 +3,10 @@
   <head>
     <title>Apartment Necessities Tracker</title>
     <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Track and manage essential apartment or home items, including quantities, utilization levels, and get alerted when you need a restock."
+    />
     <script src="js/main.js"></script>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,15 +14,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     /> -->
-    <link rel="stylesheet" href="css/pico.red.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pico.red.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- get rid of favicon error -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
   </head>
 
   <body class="page">
-    <h1 style="top: 20px; left: 20px;">Apartment Necessities Tracker</h1>
-    <main class="grid" style="padding: var(--pico-spacing);">
+    <h1 style="top: 20px; left: 20px">Apartment Necessities Tracker</h1>
+    <main class="grid">
       <form class="groceries" id="groceries">
         <label for="item">Item:</label>
         <input
@@ -79,7 +83,7 @@
         <tbody></tbody>
       </table>
     </main>
-    <footer style="padding: var(--pico-spacing); position: fixed; bottom: 20px; right: 20px;">
+    <footer>
       <form action="/logout" method="POST">
         <button class="outline" type="submit">Logout</button>
       </form>
