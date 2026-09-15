@@ -88,6 +88,7 @@ async function run() {
   });
 
   app.post("/login", async (req, res) => {
+    console.log("LOGIN ROUTE HIT");
     try {
       const username = req.body.username;
       const password = req.body.password;
