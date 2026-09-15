@@ -109,6 +109,9 @@ async function run() {
       req.session.login = true;
       req.session.userId = user._id.toString();
 
+      console.log("LOGIN SUCCESS");
+      console.log("Session:", req.session);
+
       res.redirect("/main.html");
     } catch (err) {
       console.error(err);
